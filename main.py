@@ -1,1 +1,1 @@
-print('This is the starting of AI project')
+print('This is the starting of AI project 01')
