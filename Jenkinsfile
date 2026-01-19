@@ -1,8 +1,6 @@
 pipeline {
     agent {
-        node {
-            lable 'docker-agent-python'
-        }
+        lable 'docker-agent-alpine'
     }
 
     stages {
