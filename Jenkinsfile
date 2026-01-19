@@ -9,7 +9,6 @@ pipeline {
                 echo 'Start Building..'
                 echo 'still building'
                 echo 'End of build'
-                '''
             }
         }
         stage('Test') {
