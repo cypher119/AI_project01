@@ -18,6 +18,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh '''
+                source ./.venv/bin/activate
                 python3 main.py
                 python3 main.py circle --radius=1
                 python3 main.py rectangle --height=2 --base=3
