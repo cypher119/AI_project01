@@ -8,7 +8,7 @@ pipeline {
                 echo 'Start Building..'
                 sh '''
                 python3 -m venv .venv
-                ./.venv/bin/activate
+                source ./.venv/bin/activate
                 pip install -r requirements.txt
                 python3 main.py
                 python3 main.py circle --radius=1
