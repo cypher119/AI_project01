@@ -10,17 +10,20 @@ pipeline {
                 python3 -m venv .venv
                 source ./.venv/bin/activate
                 pip install -r requirements.txt
-                python3 main.py
-                python3 main.py circle --radius=1
-                python3 main.py rectangle --height=2 --base=3
-                python3 main.py triangle --height=2 --base=3
                 '''
-                echo 'End of build'
+                echo 'Building Completed'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh '''
+                python3 main.py
+                python3 main.py circle --radius=1
+                python3 main.py rectangle --height=2 --base=3
+                python3 main.py triangle --height=2 --base=3
+                '''
+                echo "Testing Completed."
             }
         }
         stage('Deploy') {
