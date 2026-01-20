@@ -6,9 +6,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Start Building..'
-                radius=1
-                height=2
-                base=3
                 pip install -r requirements.txt
                 python3 main.py
                 python3 main.py circle --radius=1
