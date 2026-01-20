@@ -8,7 +8,7 @@ class Area:
     def rectangle(self, height, base):
         return height * base 
     
-    def traingle(self, height, base):
+    def triangle(self, height, base):
         return 0.5 * height * base 
     
 
